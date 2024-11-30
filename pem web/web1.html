@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Lapangan Online</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  function moveSlide(step) {
+    currentSlide += step;
+    if (currentSlide < 0) currentSlide = totalSlides - 1;
+    if (currentSlide >= totalSlides) currentSlide = 0;
+    updateSlidePosition();
+  }
+
+  function updateSlidePosition() {
+    const slider = document.querySelector('.slider');
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  setInterval(() => {
+    moveSlide(1); // Otomatis pindah ke gambar berikutnya setiap 3 detik
+  }, 3000);
+</script>
+
+<body>
+  <header class="navbar">
+    <div class="logo">FUTSAL ARCANA <img src="logo.jpg"></div>
+    <nav>
+      <ul>
+        <li class="li-navbar"><a href="#features">Sewa Lapangan</a></li>
+        <li class="li-navbar"><a href="#main bareng">cari vanue</a></li>
+        <li class="li-navbar"><a href="#laga sparing">laga sparing</a></li>
+        <li class="li-navbar"><a href="#sosial">sosial media </a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <button>Masuk</button>
+      <button class="daftar">Daftar</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Booking Lapangan Online Terbaik</h1>
+    <button class="cta-button">
+      <a href="vanue.html">Registration</a>
+    </button>
+  </section>
+
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="profil.jpg" alt="Foto Profil" class="profile-img">
+      <h1 class="name">Nama Pengembang</h1>
+      <p class="job-title">manager dari futsal arcana</p>
+    </div>
+
+    <div class="profile-bio">
+      <h2>Tentang Saya</h2>
+      <p>Sebagai Manager Lapangan Futsal, saya bertanggung jawab untuk memastikan kelancaran operasional lapangan futsal, mulai dari pengaturan jadwal pemakaian lapangan hingga pelayanan kepada pelanggan. Saya berkomitmen untuk memberikan pengalaman terbaik bagi pengunjung dengan menjaga kualitas lapangan, fasilitas, dan kebersihan. Selain itu, saya juga memimpin tim staf lapangan, mengelola perawatan peralatan futsal, serta menyelesaikan masalah yang muncul secara cepat dan efisien.
+
+        Saya selalu memastikan bahwa lapangan futsal selalu siap pakai, dengan pemeliharaan rutin untuk menjaga kondisi permukaan lapangan, net, dan peralatan lainnya. Selain itu, saya juga bertugas dalam pengelolaan administrasi, seperti pencatatan pemesanan, pengaturan keuangan, dan koordinasi dengan penyewa lapangan atau event futsal.
+        
+        Dalam peran saya, keterampilan komunikasi dan koordinasi sangat penting, karena saya sering berinteraksi dengan pemain, penyewa lapangan, serta tim internal. Saya selalu berusaha memberikan pelayanan yang ramah dan responsif, serta memastikan setiap pengunjung mendapatkan pengalaman bermain futsal yang menyenangkan.</p>
+
+    </div>
+
+    <div class="profile-skills">
+      <h2>benefit dan keunggulan dari lapangan arcana</h2>
+      <ul>
+        <li>Kondisi Lapangan Terbaik – Perawatan rutin dan permukaan lapangan yang optimal.</li>
+        <li>Fasilitas Lengkap dan Berkualitas – Pencahayaan, ventilasi, dan ruang ganti yang nyaman.</li>
+        <li>Fleksibilitas Jadwal – Pilihan jadwal sewa yang fleksibel.</li>
+        <li>Harga Terjangkau dan Paket Promo – Penawaran harga kompetitif dan promo hemat.</li>
+        <li>Lingkungan yang Nyaman dan Ramah – Suasana yang menyenangkan bagi pemain.</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="search-container" id="main bareng">
+    <input type="text" placeholder="Cari nama venue" class="input-field">
+    <input type="text" placeholder="Pilih Kota" class="input-field">
+    <input type="text" placeholder="Pilih lapangan " class="input-field">
+    <button class="filter-button">
+        <span class="icon">⎚</span>
+    </button>
+    <button class="search-button">Cari venue</button>
+  </div>
+
+  <section class="venues" id="main bareng">
+    <h2>Menampilkan lapangan yang tersedia  sekarang</h2>
+   <div class="column">
+  <div class="container">
+    <div class="card">
+      <img src=" futsal 6.jpg" alt="ASATU Arena Cikini" class="card-image">
+      <div class="card-content">
+        <h3>ipb futsal</h3>
+        <p>Jakarta Pusat ◦ <span>1 Lapangan</span></p>
+        <p class="price">Harga mulai <span>Rp 150,000</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <img src="gambar futsal 2.jpg" alt="ALA.PANG.AN Permata Hijau" class="card-image">
+      <div class="card-content">
+        <h3>jakarta arena </h3>
+        <p>Jakarta Selatan ◦ <span>1 Lapangan</span></p>
+        <p class="price">Harga mulai <span>Rp 205,000</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <img src="gambar futsal 3.jpg" alt="British School Jakarta Basketball" class="card-image">
+      <div class="card-content">
+        <h3>cell Arena</h3>
+        <p>Tangerang Selatan ◦ <span>2 Lapangan</span></p>
+        <p class="price">Harga mulai <span>Rp 450,000</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <img src="futsal 1.jpg" alt="T Arena" class="card-image">
+      <div class="card-content">
+        <h3>depok Arena</h3>
+        <p>Jakarta Selatan ◦ <span>1 Lapangan</span></p>
+        <p class="price">Harga mulai <span>Rp 1,100,000</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+  </section> 
+  <div class="column" id="features">
+    <div class="container">
+      <div class="card">
+        <img src="futsal 2.jpg" alt="ASATU Arena Cikini" class="card-image">
+        <div class="card-content">
+          <h3>futsal gbk</h3>
+          <p>Jakarta Pusat ◦ <span>1 Lapangan</span></p>
+          <p class="price">Harga mulai <span>Rp 250,000</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <img src="futsal 3.jpg" alt="ALA.PANG.AN Permata Hijau" class="card-image">
+        <div class="card-content">
+          <h3>futsal duta</h3>
+          <p>Jakarta Selatan ◦ <span>1 Lapangan</span></p>
+          <p class="price">Harga mulai <span>Rp 300,000</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <img src="futsal 5.jpg" alt="futsal morena" class="card-image">
+        <div class="card-content">
+          <h3>futsal morena</h3>
+          <p>Tangerang Selatan ◦ <span>2 Lapangan</span></p>
+          <p class="price">Harga mulai <span>Rp 450,000</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <img src="futsal 4.jpg" alt="T Arena" class="card-image">
+        <div class="card-content">
+          <h3>T Arena</h3>
+          <p>Jakarta Selatan ◦ <span>1 Lapangan</span></p>
+          <p class="price">Harga mulai <span>Rp 100,000</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  
+  <footer class="footer" id="sosial">
+    <div class="footer-container">
+      <!-- Kolom 1: Logo dan Kontak -->
+      <div class="footer-column">
+        <p><strong>futsal arcana</strong></p>
+        <p>Jl. Wahid Hasyim No. 10D<br>
+          Jakarta Pusat 10340<br>
+          DKI Jakarta, Indonesia</p>
+        <p>📞 <a href="tel:+6287885523838">+62878-8552-3838</a></p>
+        <div class="social-icons">
+          <a href="https://instagram.com/nggasyahh"><img src="ig.png" alt="Instagram"></a>
+          <a href="https://faccebok.com/angga"><img src="faccebok.png" alt="Facebook"></a>
+          <a href="https://whattsap.com/081803837274"><img src="wa.png" alt="whattsap"></a>
+          <a href="https://tiktok.com/angga"><img src="tiktok.png" alt="TikTok"></a>
+          <a href="https://YouTube.com/windah"><img src="yt.png" alt="YouTube"></a>
+        </div>
+      </div>
+      
+      <!-- Kolom 2: Perusahaan -->
+      <div class="footer-column">
+        <h3>Perusahaan</h3>
+        <ul>
+          <li><a href="#">Tentang</a></li>
+          <li><a href="#">Kebijakan & Privasi</a></li>
+          <li><a href="#">Syarat dan Ketentuan</a></li>
+        </ul>
+      </div>
+      </div>
+  </footer>
+</body>
+</html>
